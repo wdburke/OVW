@@ -2,9 +2,7 @@ $(function() {
 
     $('#side-menu').metisMenu();
 
-    $("#btnConsumerRPTASearch").click(function (event) {
-        document.location.href = '/pages/tables.html';
-    });
+
 
 });
 
