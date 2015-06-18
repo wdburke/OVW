@@ -8,6 +8,7 @@
 /*#region Base Element Styles*/
 body{
 background-color:@grey;
+font-family: "Trebuchet MS","Meiryo UI Reg","メイリオ Reg","MS UI Gothic Reg","Hiragino Kaku Gothic Reg","ヒラギノ角ゴ Pro W3 Reg","Microsoft YaHei","微软雅黑","Hiragino Sans GB","Microsoft JhengHei","微軟正黑體","Malgun Gothic",Gulim,Tahoma,"Arial Unicode",sans-serif;
 }
 i{
   color:@dellBlue;
@@ -16,94 +17,104 @@ i{
 /*#endregion*/
 
 /*#region Navbar styling*/
-nav.navbar{
-    background-color: @dellBlue;
-    font-family: "Trebuchet MS","Meiryo UI Reg","メイリオ Reg","MS UI Gothic Reg","Hiragino Kaku Gothic Reg","ヒラギノ角ゴ Pro W3 Reg","Microsoft YaHei","微软雅黑","Hiragino Sans GB","Microsoft JhengHei","微軟正黑體","Malgun Gothic",Gulim,Tahoma,"Arial Unicode",sans-serif;
-    font-size: 14px;
-    line-height: 1.42857;
+ 
+    nav.navbar{
+        background-color: @dellBlue;
+        font-size: 14px;
+        line-height: 1.42857;
 
-    .navbar-default, .navbar-brand {
-        color: #FFF;
-    }
-    .navbar-brand:hover{
+        .navbar-default, .navbar-brand {
             color: #FFF;
+        }
+        .navbar-brand:hover{
+                color: #FFF;
+        }
+
     }
 
-}
+    nav ul.navbar-top-links {
+        a i{
+            color: white;
+        }
 
-nav ul.navbar-top-links {
-    a i{
-        color: white;
-    }
-
-    li.dropdown:hover a {
-        background-color: white;
-        i {
-            color: @dellBlue;
+        li.dropdown:hover a {
+            background-color: white;
+            i {
+                color: @dellBlue;
+            }
         }
     }
-}
 
-li.dropdown.open a.dropdown-toggle{
-    background-color:white;
-    i{
-        color:@dellBlue;
-    }
-}
-ul.dropdown-menu.dropdown-alerts,
-ul.dropdown-menu.dropdown-user,
-ul.dropdown-menu.dropdown-messages{
-
-    li{
-        div{
-        color:black;
-        background-color:transparent;
-        }
-        a.text-center{
-        color:black;
-        background-color:transparent;
-        }
-    }
-    a{
-        background-color:transparent;
-    }
-    i{
-       color:@dellBlue;
-    }
-}
-ul.dropdown-menu.dropdown-tasks{
-    li{
-        div{
-        color:black;
-        }
-     }
-    i{
-       color:@dellBlue;
-    }
-}
-
-/*#endregion*/
-
-/*#region sidebar styling*/
-div.sidebar{
-	background-color:transparent;
-}
-div.sidebar ul li a{
-	color:@dellBlue;
-    &:hover{
-	    background-color:@dellBlue;
-	    color:@grey;
-        i{
-            color:@grey;
-        }
-    }
-    &.active {
+    li.dropdown.open a.dropdown-toggle{
         background-color:white;
-        &:hover {
-	        background-color:@dellBlue;
-	        color:@grey;
+        i{
+            color:@dellBlue;
         }
     }
+    ul.dropdown-menu.dropdown-alerts,
+    ul.dropdown-menu.dropdown-user,
+    ul.dropdown-menu.dropdown-messages{
+
+        li{
+            div{
+            color:black;
+            background-color:transparent;
+            }
+            a.text-center{
+            color:black;
+            background-color:transparent;
+            }
+        }
+        a{
+            background-color:transparent;
+        }
+        i{
+           color:@dellBlue;
+        }
+    }
+    ul.dropdown-menu.dropdown-tasks{
+        li{
+            div{
+            color:black;
+            }
+         }
+        i{
+           color:@dellBlue;
+        }
+    }
+    
+    /*#endregion*/
+
+    /*#region sidebar styling*/
+    div.sidebar{
+	    background-color:transparent;
+    }
+    div.sidebar ul li a {
+            color: @dellBlue;
+
+            &:hover {
+                background-color: @dellBlue;
+                color: @grey;
+
+                i {
+                    color: @grey;
+                }
+            }
+
+            &.active {
+                background-color: white;
+
+                &:hover {
+                    background-color: @dellBlue;
+                    color: @grey;
+                }
+            }
+        }
+    @media (max-width:768px){
+        div.sidebar ul li a {
+            background-color: @grey;
+    }
+
 }
 /*#endregion*/
 
@@ -124,6 +135,23 @@ div.sidebar ul li a{
 .form-group.rtpa-search-consumer
 {
     margin-bottom: .5em;
+    label{
+             width:100%;
+         }
+    input{
+        width:100%;
+    }
+}
+.ConsumerSearchButton{
+    color:white;
+    background-color:@dellBlue;
+}
+.ConsumerResetButton{
+    color:white;
+    background-color:@dellBlue;
+}
+.SearchControlButtons{
+    margin:10px 0 30px;  
 }
 /*#endregion*/
 
@@ -139,11 +167,6 @@ border-left:1px solid @greyDarker;
 /*#endregion*/
 
 /*#region custom IDs*/
-#spacing-div-search
-{
-    margin:125px;
-}
-#searchControlButtons{
-    padding-left:1.5em;
-}
+
+
 /*#endregion*/

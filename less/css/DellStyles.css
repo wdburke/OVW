@@ -4,6 +4,7 @@
 /*#region Base Element Styles*/
 body {
   background-color: #eeeeee;
+  font-family: "Trebuchet MS", "Meiryo UI Reg", "メイリオ Reg", "MS UI Gothic Reg", "Hiragino Kaku Gothic Reg", "ヒラギノ角ゴ Pro W3 Reg", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", "Malgun Gothic", Gulim, Tahoma, "Arial Unicode", sans-serif;
 }
 i {
   color: #0087c7;
@@ -13,7 +14,6 @@ i {
 /*#region Navbar styling*/
 nav.navbar {
   background-color: #0087c7;
-  font-family: "Trebuchet MS", "Meiryo UI Reg", "メイリオ Reg", "MS UI Gothic Reg", "Hiragino Kaku Gothic Reg", "ヒラギノ角ゴ Pro W3 Reg", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", "Malgun Gothic", Gulim, Tahoma, "Arial Unicode", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
 }
@@ -89,6 +89,11 @@ div.sidebar ul li a.active:hover {
   background-color: #0087c7;
   color: #eeeeee;
 }
+@media (max-width: 768px) {
+  div.sidebar ul li a {
+    background-color: #eeeeee;
+  }
+}
 /*#endregion*/
 /*#region Panels*/
 /*#region Panel Header for Dashboard*/
@@ -106,6 +111,23 @@ div.panel-footer {
 .form-group.rtpa-search-consumer {
   margin-bottom: .5em;
 }
+.form-group.rtpa-search-consumer label {
+  width: 100%;
+}
+.form-group.rtpa-search-consumer input {
+  width: 100%;
+}
+.ConsumerSearchButton {
+  color: white;
+  background-color: #0087c7;
+}
+.ConsumerResetButton {
+  color: white;
+  background-color: #0087c7;
+}
+.SearchControlButtons {
+  margin: 10px 0 30px;
+}
 /*#endregion*/
 /*#region IDs*/
 #wrapper {
@@ -117,10 +139,4 @@ div.panel-footer {
 }
 /*#endregion*/
 /*#region custom IDs*/
-#spacing-div-search {
-  margin: 125px;
-}
-#searchControlButtons {
-  padding-left: 1.5em;
-}
 /*#endregion*/
