@@ -466,7 +466,7 @@
                                 </div>
                             </div>
                             <div id="menu1" class="tab-pane fade">
-                                <div id="grid1" ui-grid="gridOptions" ui-grid-tree-view class="grid"></div>
+
                             </div>
                             <div id="menu2" class="tab-pane fade">
                                 <h3>Menu 2</h3>
@@ -489,6 +489,20 @@
 
     </div>
     <!-- /#wrapper -->
+    <button ng-click="toggleModal()" class="btn btn-default">Open modal</button>
+    <modal title="Login form" visible="showModal">
+        <form role="form">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </modal>
 
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -505,14 +519,6 @@
 
     <!-- Angular JavaScript -->
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
-    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
-    <script src="../bower_components/angular-ui-grid/ui-grid.js"></script>
-    <script src="../bower_components/angular-ui-grid/ui-grid.css"></script>
-
     <script src="../app/js/controllers.js"></script>
     <script src="../app/js/app.js"></script>
 
@@ -526,6 +532,13 @@
         $('#dataTables-example').DataTable({
                 responsive: true
         });
+
+        $('#dataTables-example tbody').on('click', 'tr', function () {
+            var name = $('td', this).eq(0).text();
+            //toggleModal();
+            angular.element('#PhoneListCtrl').scope().toggleModal();
+        } );
+
     });
     </script>
 
