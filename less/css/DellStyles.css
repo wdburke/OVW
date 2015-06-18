@@ -131,6 +131,12 @@ div.panel-footer {
 .modal-dialog {
   width: 1300px;
 }
+.panel-body i {
+  color: white;
+}
+.panel-body div.list-group i {
+  color: #0087c7;
+}
 /*#endregion*/
 /*#region IDs*/
 #wrapper {
