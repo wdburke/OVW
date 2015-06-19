@@ -24,10 +24,13 @@ i{
         line-height: 1.42857;
 
         .navbar-default, .navbar-brand {
-            color: #FFF;
+            color: white;
+            i{
+                color:white;
+            }
         }
         .navbar-brand:hover{
-                color: #FFF;
+                color: white;
         }
 
     }
@@ -91,7 +94,9 @@ i{
     }
     div.sidebar ul li a {
             color: @dellBlue;
-
+            i.fa{
+                color:@dellBlue;
+            }
             &:hover {
                 background-color: @dellBlue;
                 color: @grey;
@@ -154,7 +159,10 @@ i{
     margin:10px 0 30px;  
 }
 .modal-dialog {
-            width: 1300px;
+            width: 90%;
+            top:5%;
+            left:5%;
+            margin:0px;
         }
 .panel-body {
     i {
@@ -164,6 +172,12 @@ i{
         i{
             color:@dellBlue;
         }
+    }
+}
+@media (max-width:1250px) {
+    div.dataTable_wrapper {
+        width: 95%;
+        overflow: auto;
     }
 }
 /*#endregion*/
@@ -177,9 +191,18 @@ background-color:@grey;
 background-color:white;
 border-left:1px solid @greyDarker;
 }
+
+#earlsmodelbutton{
+    display:none;
+}
 /*#endregion*/
 
-/*#region custom IDs*/
+/*#region custom rules*/
+@media (max-width:768px) {
+    div#page-wrapper .row:first-child{
+        width:99%;
+        margin:0 1px;
+    }
 
-
+}
 /*#endregion*/

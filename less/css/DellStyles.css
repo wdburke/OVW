@@ -19,10 +19,14 @@ nav.navbar {
 }
 nav.navbar .navbar-default,
 nav.navbar .navbar-brand {
-  color: #FFF;
+  color: white;
+}
+nav.navbar .navbar-default i,
+nav.navbar .navbar-brand i {
+  color: white;
 }
 nav.navbar .navbar-brand:hover {
-  color: #FFF;
+  color: white;
 }
 nav ul.navbar-top-links a i {
   color: white;
@@ -73,6 +77,9 @@ div.sidebar {
   background-color: transparent;
 }
 div.sidebar ul li a {
+  color: #0087c7;
+}
+div.sidebar ul li a i.fa {
   color: #0087c7;
 }
 div.sidebar ul li a:hover {
@@ -129,13 +136,22 @@ div.panel-footer {
   margin: 10px 0 30px;
 }
 .modal-dialog {
-  width: 1300px;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  margin: 0px;
 }
 .panel-body i {
   color: white;
 }
 .panel-body div.list-group i {
   color: #0087c7;
+}
+@media (max-width: 1250px) {
+  div.dataTable_wrapper {
+    width: 95%;
+    overflow: auto;
+  }
 }
 /*#endregion*/
 /*#region IDs*/
@@ -146,6 +162,15 @@ div.panel-footer {
   background-color: white;
   border-left: 1px solid #b7b7b7;
 }
+#earlsmodelbutton {
+  display: none;
+}
 /*#endregion*/
-/*#region custom IDs*/
+/*#region custom rules*/
+@media (max-width: 768px) {
+  div#page-wrapper .row:first-child {
+    width: 99%;
+    margin: 0 1px;
+  }
+}
 /*#endregion*/
