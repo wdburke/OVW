@@ -1,4 +1,4 @@
-/*Dell styling*/
+/*client styling*/
 /*#region variables*/
 /*#endregion*/
 /*#region Base Element Styles*/
@@ -9,6 +9,11 @@ body {
 i {
   color: #0087c7;
   background-color: transparent;
+}
+/*#endregion*/
+/*#region Overwrites*/
+.nav-tabs {
+  border-bottom: none;
 }
 /*#endregion*/
 /*#region Navbar styling*/
