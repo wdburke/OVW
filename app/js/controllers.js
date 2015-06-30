@@ -66,32 +66,32 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
 
         $scope.gridOptions.data = [
             {
-                "SplitPay" : "Sue",
-                "DPID" : "456867567",
-                "OrderNumber" : "43242341",
-                "DCN" : "66456451",
-                "CoNum" : "1678678",
-                "Source" : "DOMS",
-                "OrderDate" : "7/1/2015",
-                "DellStatus" : "Good",
-                "DFSStatus" : "Good",
-                "AuthCode" : "AC",
-                "DPAAmt" : "1000",
-                "TotalAmt" : "150"
+                "SplitPay": "Sue",
+                "PurchaseID": "456867567",
+                "OrderNumber": "43242341",
+                "CCN": "66456451",
+                "CoNum": "1678678",
+                "Source": "Phone",
+                "OrderDate": "7/1/2015",
+                "CustomerStatus": "Good",
+                "FSStatus": "Good",
+                "AuthCode": "AC",
+                "CPAAmt": "1000",
+                "TotalAmt": "150"
             },
             {
-                "SplitPay" : "Bob",
-                "DPID" : "1232332",
-                "OrderNumber" : "34534",
-                "DCN" : "123123",
-                "CoNum" : "656756756",
-                "Source" : "DOMS",
-                "OrderDate" : "7/2/2015",
-                "DellStatus" : "Good",
-                "DFSStatus" : "Bad",
-                "AuthCode" : "AC",
-                "DPAAmt" : "5000",
-                "TotalAmt" : "650"
+                "SplitPay": "Bob",
+                "PurchaseID": "1232332",
+                "OrderNumber": "34534",
+                "CCN": "123123",
+                "CoNum": "656756756",
+                "Source": "Online",
+                "OrderDate": "7/2/2015",
+                "CustomerStatus": "Good",
+                "FSStatus": "Bad",
+                "AuthCode": "AC",
+                "CPAAmt": "5000",
+                "TotalAmt": "650"
             }
         ];
 

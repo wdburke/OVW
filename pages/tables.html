@@ -29,8 +29,8 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <!--Dell Styling-->
-	<link href="../less/css/DellStyles.min.css" rel="stylesheet">
+    <!--client Styling-->
+	<link href="../less/css/clientStyles.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><i class="fa fa-lg fa-eye" style="color: white"></i>  OneView 2.0</a>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-lg fa-eye" style="color: white"></i>  App 2.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -306,7 +306,7 @@
             <div class="row">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">OneView Customer Information</h1>
+                        <h1 class="page-header">App Customer Information</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -425,32 +425,32 @@
                                                         <thead>
                                                         <tr>
                                                             <th>Split Pay</th>
-                                                            <th>DPID</th>
+                                                            <th>PurchaseID</th>
                                                             <th>Order Number</th>
-                                                            <th>DCN</th>
+                                                            <th>CCN</th>
                                                             <th>Co Num</th>
                                                             <th>Source</th>
                                                             <th>Order Date</th>
-                                                            <th>Dell Status</th>
-                                                            <th>DFS Status</th>
+                                                            <th>Customer Status</th>
+                                                            <th>FS Status</th>
                                                             <th>Auth Code</th>
-                                                            <th>DPA Amt</th>
+                                                            <th>CPA Amt</th>
                                                             <th>Total Amt</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
                                                         <tr ng-repeat="phone in orders" ng-class="rowClass(phone)">
                                                             <td>{{ phone.SplitPay }}</td>
-                                                            <td>{{ phone.DPID }}</td>
+                                                            <td>{{ phone.PurchaseID }}</td>
                                                             <td>{{ phone.OrderNumber }}</td>
-                                                            <td>{{ phone.DCN }}</td>
+                                                            <td>{{ phone.CCN }}</td>
                                                             <td>{{ phone.CoNum }}</td>
                                                             <td>{{ phone.Source }}</td>
                                                             <td>{{ phone.OrderDate }}</td>
-                                                            <td>{{ phone.DellStatus }}</td>
-                                                            <td>{{ phone.DFSStatus }}</td>
+                                                            <td>{{ phone.CustomerStatus }}</td>
+                                                            <td>{{ phone.FSStatus }}</td>
                                                             <td>{{ phone.AuthCode }}</td>
-                                                            <td>{{ phone.DPAAmt }}</td>
+                                                            <td>{{ phone.CPAAmt }}</td>
                                                             <td>{{ phone.TotalAmt }}</td>
                                                         </tr>
 
@@ -493,7 +493,7 @@
     </div>
     <!-- /#wrapper -->
     <button id="earlsmodelbutton" ng-click="toggleMyModal()" class="btn btn-default">Open modal</button>
-    <modal title="DPID 1983743612971233" visible="showModal">
+    <modal title="PurchaseID 1983743612971233" visible="showModal">
         <div ng-include="'../pages/partials/OrderDetailsModal.html'"></div>
     </modal>
 
