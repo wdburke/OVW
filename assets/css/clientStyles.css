@@ -1,9 +1,7 @@
 /*client styling*/
-/*#region variables*/
-/*#endregion*/
 /*#region Base Element Styles*/
 body {
-  background-color: #eeeeee;
+  background-color: #b7b7b7;
   font-family: "Trebuchet MS", "Meiryo UI Reg", "メイリオ Reg", "MS UI Gothic Reg", "Hiragino Kaku Gothic Reg", "ヒラギノ角ゴ Pro W3 Reg", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "Microsoft JhengHei", "微軟正黑體", "Malgun Gothic", Gulim, Tahoma, "Arial Unicode", sans-serif;
 }
 i {
@@ -17,6 +15,18 @@ i {
 }
 /*#endregion*/
 /*#region Navbar styling*/
+li.dropdown.open a.dropdown-toggle {
+  background-color: white;
+}
+li.dropdown.open a.dropdown-toggle i {
+  color: #0087c7;
+}
+li.dropdown a.dropdown-toggle {
+  background-color: #0087c7;
+}
+li.dropdown a.dropdown-toggle i {
+  color: white;
+}
 nav.navbar {
   background-color: #0087c7;
   font-size: 14px;
@@ -40,12 +50,6 @@ nav ul.navbar-top-links li.dropdown:hover a {
   background-color: white;
 }
 nav ul.navbar-top-links li.dropdown:hover a i {
-  color: #0087c7;
-}
-li.dropdown.open a.dropdown-toggle {
-  background-color: white;
-}
-li.dropdown.open a.dropdown-toggle i {
   color: #0087c7;
 }
 ul.dropdown-menu.dropdown-alerts li div,
@@ -160,15 +164,15 @@ div.panel-footer {
 }
 /*#endregion*/
 /*#region IDs*/
-#wrapper {
-  background-color: #eeeeee;
+#earlsmodelbutton {
+  display: none;
 }
 #page-wrapper {
   background-color: white;
   border-left: 1px solid #b7b7b7;
 }
-#earlsmodelbutton {
-  display: none;
+#wrapper {
+  background-color: #eeeeee;
 }
 /*#endregion*/
 /*#region custom rules*/

@@ -1,13 +1,11 @@
 ﻿/*client styling*/
-/*#region variables*/
 @clientBlue:#0087C7;
-@greyDarker:#B7B7B7;
+@greyDarker: @grey*.77;
 @grey:#EEE;
-/*#endregion*/
 
 /*#region Base Element Styles*/
 body{
-background-color:@grey;
+background-color:@greyDarker;
 font-family: "Trebuchet MS","Meiryo UI Reg","メイリオ Reg","MS UI Gothic Reg","Hiragino Kaku Gothic Reg","ヒラギノ角ゴ Pro W3 Reg","Microsoft YaHei","微软雅黑","Hiragino Sans GB","Microsoft JhengHei","微軟正黑體","Malgun Gothic",Gulim,Tahoma,"Arial Unicode",sans-serif;
 }
 i{
@@ -22,108 +20,112 @@ i{
 /*#endregion*/
 /*#region Navbar styling*/
  
-    nav.navbar{
-        background-color: @clientBlue;
-        font-size: 14px;
-        line-height: 1.42857;
+li.dropdown.open a.dropdown-toggle{
+    background-color:white;
+    i{
+        color:@clientBlue;
+    }
+}
+li.dropdown a.dropdown-toggle {
+    background-color:@clientBlue;
+    i{
+        color:white;
+    }
+}
+nav.navbar{
+    background-color: @clientBlue;
+    font-size: 14px;
+    line-height: 1.42857;
 
-        .navbar-default, .navbar-brand {
+    .navbar-default, .navbar-brand {
+        color: white;
+        i{
+            color:white;
+        }
+    }
+    .navbar-brand:hover{
             color: white;
-            i{
-                color:white;
-            }
-        }
-        .navbar-brand:hover{
-                color: white;
-        }
-
     }
 
-    nav ul.navbar-top-links {
-        a i{
-            color: white;
-        }
+}
 
-        li.dropdown:hover a {
-            background-color: white;
-            i {
-                color: @clientBlue;
-            }
-        }
+nav ul.navbar-top-links {
+    a i{
+        color: white;
     }
 
-    li.dropdown.open a.dropdown-toggle{
-        background-color:white;
-        i{
-            color:@clientBlue;
-        }
-    }
-    ul.dropdown-menu.dropdown-alerts,
-    ul.dropdown-menu.dropdown-user,
-    ul.dropdown-menu.dropdown-messages{
-
-        li{
-            div{
-            color:black;
-            background-color:transparent;
-            }
-            a.text-center{
-            color:black;
-            background-color:transparent;
-            }
-        }
-        a{
-            background-color:transparent;
-        }
-        i{
-           color:@clientBlue;
-        }
-    }
-    ul.dropdown-menu.dropdown-tasks{
-        li{
-            div{
-            color:black;
-            }
-         }
-        i{
-           color:@clientBlue;
-        }
-    }
-    
-    /*#endregion*/
-
-    /*#region sidebar styling*/
-    div.sidebar{
-	    background-color:transparent;
-    }
-    div.sidebar ul li a {
+    li.dropdown:hover a {
+        background-color: white;
+        i {
             color: @clientBlue;
-            i.fa{
-                color:@clientBlue;
-            }
-            &:hover {
-                background-color: @clientBlue;
-                color: @grey;
-
-                i {
-                    color: @grey;
-                }
-            }
-
-            &.active {
-                background-color: white;
-
-                &:hover {
-                    background-color: @clientBlue;
-                    color: @grey;
-                }
-            }
         }
-    @media (max-width:768px){
-        div.sidebar ul li a {
-            background-color: @grey;
+    }
+}
+ul.dropdown-menu.dropdown-alerts,
+ul.dropdown-menu.dropdown-user,
+ul.dropdown-menu.dropdown-messages{
+
+    li{
+        div{
+        color:black;
+        background-color:transparent;
+        }
+        a.text-center{
+        color:black;
+        background-color:transparent;
+        }
+    }
+    a{
+        background-color:transparent;
+    }
+    i{
+        color:@clientBlue;
+    }
+}
+ul.dropdown-menu.dropdown-tasks{
+    li{
+        div{
+        color:black;
+        }
+        }
+    i{
+        color:@clientBlue;
+    }
+}
+    
+/*#endregion*/
+
+/*#region sidebar styling*/
+div.sidebar{
+	background-color:transparent;
+}
+div.sidebar ul li a {
+    color: @clientBlue;
+    i.fa{
+        color:@clientBlue;
+    }
+    &:hover {
+        background-color: @clientBlue;
+        color: @grey;
+
+        i {
+            color: @grey;
+        }
     }
 
+    &.active {
+        background-color: white;
+
+        &:hover {
+            background-color: @clientBlue;
+            color: @grey;
+        }
+    }
+}
+@media (max-width:768px){
+    div.sidebar ul li a {
+        background-color: @grey;
+    }
 }
 /*#endregion*/
 
@@ -187,17 +189,15 @@ i{
 /*#endregion*/
 
 /*#region IDs*/
-#wrapper{
-background-color:@grey;
+#earlsmodelbutton{
+    display:none;
 }
-
 #page-wrapper{
 background-color:white;
 border-left:1px solid @greyDarker;
 }
-
-#earlsmodelbutton{
-    display:none;
+#wrapper{
+background-color:@grey;
 }
 /*#endregion*/
 
