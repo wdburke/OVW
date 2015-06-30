@@ -102,47 +102,58 @@
 <div class="col-lg-12">
     <div>
         <h2>Orders</h2>
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Order History</a></li>
-            <li><a data-toggle="tab" href="#menu1">Account Info</a></li>
-            <li><a data-toggle="tab" href="#menu2">Customer Info</a></li>
-            <li><a data-toggle="tab" href="#menu3">Transaction History</a></li>
-        </ul>
 
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <!-- /.panel-heading -->
-                            <div class="panel-body">
-                                <div class="dataTable_wrapper">
-                                    <div id="myGrid" ui-grid="gridOptions" ui-grid-selection ui-grid-resize-columns class="myGrid" ></div>
-                                 </div>
-                                <script type="text/ng-template" id="ngTemplate/infoPopup.html">
-                                    <div ng-include="'app/components/consumerRTPA/views/OrderDetailsModal.html'"></div>
-                                </script>
-                                <!-- /.table-responsive -->
+        <div>
 
+            <tabset justified="true">
+                <tab>
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-shopping-cart"></i> Order History
+                    </tab-heading>
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <!-- /.panel-heading -->
+                                    <div class="panel-body">
+                                        <div class="dataTable_wrapper">
+                                            <div id="myGrid" ui-grid="gridOptions" ui-grid-selection ui-grid-resize-columns class="myGrid" ></div>
+                                        </div>
+                                        <script type="text/ng-template" id="ngTemplate/infoPopup.html">
+                                            <div ng-include="'app/components/consumerRTPA/views/OrderDetailsModal.html'"></div>
+                                        </script>
+                                        <!-- /.table-responsive -->
+
+                                    </div>
+                                    <!-- /.panel-body -->
+                                </div>
+                                <!-- /.panel -->
                             </div>
-                            <!-- /.panel-body -->
+                            <!-- /.col-lg-12 -->
                         </div>
-                        <!-- /.panel -->
                     </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-            </div>
-            <div id="menu1" class="tab-pane fade">
+                </tab>
+                <tab>
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-folder-open"></i> Account Info
+                    </tab-heading>
+                    This is the customers account Info
+                </tab>
+                <tab>
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-user"></i> Customer Info
+                    </tab-heading>
+                    This is the customers Info
+                </tab>
+                <tab>
+                    <tab-heading>
+                        <i class="glyphicon glyphicon-transfer"></i> Transaction Info
+                    </tab-heading>
+                    This is the Transaction Info
+                </tab>
+            </tabset>
 
-            </div>
-            <div id="menu2" class="tab-pane fade">
-                <h3>Menu 2</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div id="menu3" class="tab-pane fade">
-                <h3>Menu 3</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
+
         </div>
     </div>
 </div>

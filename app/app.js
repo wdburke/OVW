@@ -6,7 +6,7 @@ var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.
 myApp.config(function($stateProvider, $urlRouterProvider) {
     //
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.otherwise("/dashboard");
+    //$urlRouterProvider.otherwise("/dashboard");
     //
     // Route State Setup
     $stateProvider

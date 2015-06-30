@@ -7,7 +7,6 @@ var myControllers = angular.module('myControllers', []);
 
 
 
-
 myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$modal', '$log',
     function ($scope, $http, $interval, $modal, $log) {
 
@@ -50,21 +49,21 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
        }
 
         $scope.gridOptions.columnDefs = [
-            { name: 'SplitPay', enableCellEditOnFocus:false, displayName:'Split Pay', width: 200  },
-            { name: 'DPID', enableCellEditOnFocus:false, displayName:'DPID', width: 200  },
-            { name: 'OrderNumber', enableCellEditOnFocus:false, displayName:'Order Number', width: 200  },
-            { name: 'DCN', enableCellEditOnFocus:false, displayName:'DCN', width: 200  },
-            { name: 'CoNum', enableCellEditOnFocus:false, displayName:'Co Num', width: 200  },
-            { name: 'Source', enableCellEditOnFocus:false, displayName:'Source', width: 200  },
-            { name: 'OrderDate', enableCellEditOnFocus:false, displayName:'Order Date', width: 200  },
-            { name: 'DellStatus', enableCellEditOnFocus:false, displayName:'Dell Status', width: 200  },
-            { name: 'DFSStatus', enableCellEditOnFocus:false, displayName:'DFS Status', width: 200  },
-            { name: 'AuthCode', enableCellEditOnFocus:false, displayName:'Auth Code', width: 200  },
-            { name: 'DPAAmt', enableCellEditOnFocus:false, displayName:'DPAAmt', width: 200  },
-            { name: 'TotalAmt', enableCellEditOnFocus:false, displayName:'TotalAmt', width: 200  }
+            { name: 'SplitPay', enableCellEditOnFocus:false, displayName:'Split Pay' },
+            { name: 'DPID', enableCellEditOnFocus:false, displayName:'DPID' },
+            { name: 'OrderNumber', enableCellEditOnFocus:false, displayName:'Order Number' },
+            { name: 'DCN', enableCellEditOnFocus:false, displayName:'DCN' },
+            { name: 'CoNum', enableCellEditOnFocus:false, displayName:'Co Num' },
+            { name: 'Source', enableCellEditOnFocus:false, displayName:'Source'},
+            { name: 'OrderDate', enableCellEditOnFocus:false, displayName:'Order Date'},
+            { name: 'DellStatus', enableCellEditOnFocus:false, displayName:'Dell Status'},
+            { name: 'DFSStatus', enableCellEditOnFocus:false, displayName:'DFS Status' },
+            { name: 'AuthCode', enableCellEditOnFocus:false, displayName:'Auth Code' },
+            { name: 'DPAAmt', enableCellEditOnFocus:false, displayName:'DPAAmt' },
+            { name: 'TotalAmt', enableCellEditOnFocus:false, displayName:'TotalAmt' }
        ];
 
-        var millisecondsToWait = 500;
+        var millisecondsToWait = 5000;
         setTimeout(function() {
             $scope.gridOptions.data = [
                 {
