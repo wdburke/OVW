@@ -1,9 +1,24 @@
 $(function() {
 
-    $('#side-menu').metisMenu();
+    //$('#side-menu').metisMenu();
 
 
 
+});
+
+$(document).ready(function() {
+
+    //$("#searchMedium").click(function (event) {
+    //    //document.location.href = '/pages/tables.html';
+    //    window.location.href = "../pages/tables.html";
+    //    return false;
+    //});
+    //
+    //$("#searchLarge").click(function (event) {
+    //    //document.location.href = '/pages/tables.html';
+    //    window.location.href = "../pages/tables.html";
+    //    return false;
+    //});
 });
 
 //Loads the correct sidebar on window load,

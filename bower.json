@@ -39,6 +39,7 @@
     "flot.tooltip": "~0.8.4",
     "angular-ui-router": "~0.2.15",
     "d3": "~3.5.5",
-    "angular-ui-grid": "~3.0.0-rc.22"
+    "angular-ui-grid": "~3.0.0-rc.22",
+    "angularjs": "1.3.16"
   }
 }

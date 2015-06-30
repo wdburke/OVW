@@ -356,3 +356,8 @@ table.dataTable thead .sorting:after {
 #toplogo {
       width: 235px;
 }
+
+.myGrid {
+    /*width: 500px;*/
+    /*height: 250px;*/
+}

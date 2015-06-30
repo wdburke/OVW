@@ -1,15 +1,52 @@
 /**
  * Created by Earl on 6/17/2015.
  */
-var phonecatApp = angular.module('phonecatApp', ['phonecatControllers' ]);
+var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.grid.saveState', 'ui.grid.selection', 'ui.grid.cellNav', 'ui.grid.resizeColumns', 'ui.grid.moveColumns', 'ui.grid.pinning', 'ui.bootstrap', 'ui.grid.autoResize' ]);
+
+myApp.config(function($stateProvider, $urlRouterProvider) {
+    //
+    // For any unmatched url, redirect to /state1
+    $urlRouterProvider.otherwise("/dashboard");
+    //
+    // Route State Setup
+    $stateProvider
+        .state('dashboard', {
+            url: "/dashboard",
+            templateUrl: "partials/dashboard.html"
+        })
+        .state('state1.list', {
+            url: "/list",
+            templateUrl: "state1.list.html",
+            controller: function($scope) {
+                $scope.items = ["A", "List", "Of", "Items"];
+            }
+        })
+        .state('search', {
+            url: "/search",
+            templateUrl: "partials/search.html"
+        })
+        .state('state2.list', {
+            url: "/list",
+            templateUrl: "state2.list.html",
+            controller: function($scope) {
+                $scope.things = ["A", "Set", "Of", "Things"];
+            }
+        })
+        .state('orderHistoryList', {
+            url: "/orderHistoryList",
+            templateUrl: "partials/orderHistoryList.html"
+        })
+});
 
 
-phonecatApp.directive('modal', function () {
+
+
+myApp.directive('modal', function () {
     return {
         template: '<div class="modal fade">' +
         '<div class="modal-dialog">' +
         '<div class="modal-content">' +
-        '<div class="modal-header">' +
+        '<div cslass="modal-header">' +
         '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' +
         '<h4 class="modal-title">{{ title }}</h4>' +
         '</div>' +
