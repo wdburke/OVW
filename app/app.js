@@ -6,7 +6,7 @@ var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.
 myApp.config(function($stateProvider, $urlRouterProvider) {
     //
     // For any unmatched url, redirect to /state1
-    //$urlRouterProvider.otherwise("/dashboard");
+    $urlRouterProvider.otherwise("/dashboard");
     //
     // Route State Setup
     $stateProvider
@@ -21,9 +21,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
                 $scope.items = ["A", "List", "Of", "Items"];
             }
         })
-        .state('search', {
-            url: "/search",
-            templateUrl: "app/components/consumerRTPA/views/search.html"
+        .state('ConsumerRTPA', {
+            url: "/ConsumerRTPA",
+            templateUrl: "app/components/consumerRTPA/views/MainConsumerView.html"
         })
         .state('state2.list', {
             url: "/list",
