@@ -6,6 +6,171 @@
 var myControllers = angular.module('myControllers', []);
 
 
+myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
+
+    var millisecondsToWait = 500;
+    setTimeout(function() {
+        $scope.gridOptions.data = [
+            {
+                "SplitPay": "Sue",
+                "DPID": "456353522",
+                "OrderNumber": "6785674564",
+                "DCN": "456867567",
+                "CoNum": "1678678",
+                "Source": "Phone",
+                "OrderDate": "7/1/2015",
+                "DellStatus": "Good",
+                "DFSStatus": "Good",
+                "AuthCode": "AC",
+                "DPAAmt": "1000",
+                "TotalAmt": "150"
+            },
+            {
+                "SplitPay": "Bob",
+                "DPID": "667456745",
+                "OrderNumber": "234213423",
+                "DCN": "56756575",
+                "CoNum": "7978567457",
+                "Source": "Phone",
+                "OrderDate": "7/2/2015",
+                "DellStatus": "Good",
+                "DFSStatus": "Bad",
+                "AuthCode": "ACC",
+                "DPAAmt": "5000",
+                "TotalAmt": "820"
+            }
+        ];
+    }, millisecondsToWait);
+
+}]);
+
+myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
+
+    var millisecondsToWait = 500;
+    setTimeout(function() {
+        $scope.gridOptions.data = [
+            {
+                "SplitPay": "Sue",
+                "DPID": "456353522",
+                "OrderNumber": "6785674564",
+                "DCN": "456867567",
+                "CoNum": "1678678",
+                "Source": "Phone",
+                "OrderDate": "7/1/2015",
+                "DellStatus": "Good",
+                "DFSStatus": "Good",
+                "AuthCode": "AC",
+                "DPAAmt": "1000",
+                "TotalAmt": "150"
+            },
+            {
+                "SplitPay": "Bob",
+                "DPID": "667456745",
+                "OrderNumber": "234213423",
+                "DCN": "56756575",
+                "CoNum": "7978567457",
+                "Source": "Phone",
+                "OrderDate": "7/2/2015",
+                "DellStatus": "Good",
+                "DFSStatus": "Bad",
+                "AuthCode": "ACC",
+                "DPAAmt": "5000",
+                "TotalAmt": "820"
+            }
+        ];
+    }, millisecondsToWait);
+
+}]);
+
+
+myControllers.controller('treeCtrl', ['$scope', '$filter',
+    function($scope, $filter) {
+
+        //$scope.remove = function(scope) {
+        //    scope.remove();
+        //};
+        //
+        $scope.newSubItem = function(scope) {
+            var nodeData = scope.$modelValue;
+            nodeData.nodes.push({
+                id: nodeData.id * 10 + nodeData.nodes.length,
+                title: nodeData.title + '.' + (nodeData.nodes.length + 1),
+                nodes: []
+            });
+        };
+
+        $scope.visible = function(item) {
+            if ($scope.query && $scope.query.length > 0
+                && item.title.indexOf($scope.query) == -1) {
+                return false;
+            }
+            return true;
+        };
+
+        $scope.findNodes = function(){
+
+        };
+
+        $scope.data = [{
+            "id": 1,
+            "title": "node1",
+            "nodes": [
+                {
+                    "id": 11,
+                    "title": "node1.1",
+                    "nodes": [
+                        {
+                            "id": 111,
+                            "title": "node1.1.1",
+                            "nodes": []
+                        }
+                    ]
+                },
+                {
+                    "id": 12,
+                    "title": "node1.2",
+                    "nodes": []
+                }
+            ],
+        }, {
+            "id": 2,
+            "title": "node2",
+            "nodes": [
+                {
+                    "id": 21,
+                    "title": "node2.1",
+                    "nodes": []
+                },
+                {
+                    "id": 22,
+                    "title": "node2.2",
+                    "nodes": []
+                }
+            ],
+        }, {
+            "id": 3,
+            "title": "node3",
+            "nodes": [
+                {
+                    "id": 31,
+                    "title": "node3.1",
+                    "nodes": []
+                }
+            ],
+        }, {
+            "id": 4,
+            "title": "node4",
+            "nodes": [
+                {
+                    "id": 41,
+                    title: "node4.1",
+                    "nodes": []
+                }
+            ],
+        }];
+    }
+]);
+
 
 myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$modal', '$log',
     function ($scope, $http, $interval, $modal, $log) {
@@ -63,7 +228,7 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
             { name: 'TotalAmt', enableCellEditOnFocus:false, displayName:'TotalAmt' }
        ];
 
-        var millisecondsToWait = 5000;
+        var millisecondsToWait = 500;
         setTimeout(function() {
             $scope.gridOptions.data = [
                 {

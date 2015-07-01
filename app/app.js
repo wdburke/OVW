@@ -1,18 +1,26 @@
 /**
  * Created by Earl on 6/17/2015.
  */
-var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.grid.saveState', 'ui.grid.selection', 'ui.grid.cellNav', 'ui.grid.resizeColumns', 'ui.grid.moveColumns', 'ui.grid.pinning', 'ui.bootstrap', 'ui.grid.autoResize','angular-loading-bar' ]);
+var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.grid.saveState', 'ui.grid.selection', 'ui.grid.cellNav', 'ui.grid.resizeColumns', 'ui.grid.moveColumns', 'ui.grid.pinning', 'ui.bootstrap', 'ui.grid.autoResize','angular-loading-bar', 'ui.tree' ]);
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
     //
     // For any unmatched url, redirect to /state1
-    //$urlRouterProvider.otherwise("/dashboard");
+    $urlRouterProvider.otherwise("/dashboard");
     //
     // Route State Setup
     $stateProvider
         .state('dashboard', {
             url: "/dashboard",
             templateUrl: "app/components/home/views/dashboard.html"
+        })
+        .state('SMBRTPA', {
+            url: "/SMBRTPA",
+            templateUrl: "app/components/SMBRTPA/views/MainSMBView.html"
+        })
+        .state('FAST', {
+            url: "/FAST",
+            templateUrl: "app/components/FAST/views/MainFASTView.html"
         })
         .state('state1.list', {
             url: "/list",
@@ -21,9 +29,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
                 $scope.items = ["A", "List", "Of", "Items"];
             }
         })
-        .state('search', {
-            url: "/search",
-            templateUrl: "app/components/consumerRTPA/views/search.html"
+        .state('ConsumerRTPA', {
+            url: "/ConsumerRTPA",
+            templateUrl: "app/components/consumerRTPA/views/MainConsumerView.html"
         })
         .state('state2.list', {
             url: "/list",

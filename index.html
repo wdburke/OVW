@@ -30,8 +30,11 @@
     <!-- Angular UI Grid CSS -->
     <link rel="styleSheet" href="bower_components/angular-loading-bar/src/loading-bar.css"/>
 
+    <!-- Angular UI Tree CSS -->
+    <link rel="styleSheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css"/>
+
     <!--client Styling-->
-    <link href="assets/css/clientStyles.min.css" rel="stylesheet">
+    <link href="assets/css/clientStyles.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/css/sb-admin-2.css" rel="stylesheet">
@@ -287,11 +290,16 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a ui-sref="dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <a ui-sref="dashboard"><i class="fa fa-home fa-fw"></i>Home</a>
                     </li>
-
                     <li>
-                        <a ui-sref="search"><i class="fa fa-table fa-fw"></i>Consumer RTPA</a>
+                        <a ui-sref="SMBRTPA"><i class="fa fa-table fa-fw"></i>SMB RTPA</a>
+                    </li>
+                    <li>
+                        <a ui-sref="FAST"><i class="fa fa-table fa-fw"></i>FAST</a>
+                    </li>
+                    <li>
+                        <a ui-sref="ConsumerRTPA"><i class="fa fa-table fa-fw"></i>Consumer RTPA</a>
                     </li>
 
                 </ul>
@@ -322,6 +330,7 @@
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+<script src="bower_components/angular-ui-tree/dist/angular-ui-tree.min.js"></script>
 <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
 <script src="app/components/consumerRTPA/controllers/controllers.js"></script>
 <script src="app/app.js"></script>
