@@ -1,27 +1,26 @@
-
-<div class="row">
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">Consumer Queue</div>
+       <div class="panel panel-default">
+            <div class="panel-heading">Consumer Workspace</div>
             <div class="panel-body">
-                <div class="row">
-
-                    <div ng-controller="ConsumerHomeAccountsInWorkspaceCtrl">
-                        <div id="firstGrid" ui-grid="gridOptions" ui-grid-selection ui-grid-cellNav class="grid"></div>
+                    <div>
+                        <h3>
+                            Accounts In Your Workspace
+                        </h3>
+                    </div>
+                     <div ng-controller="ConsumerHomeAccountsInWorkspaceCtrl">
+                        <div id="firstGrid" ui-grid="ConsumerHomeAccountsInWorkspaceGridOptions" external-scopes="clickHandler"  ui-grid-selection ui-grid-cellNav class="grid"></div>
+                    </div>
+                    <div>
+                        <h3>
+                            Credit Applications In Your Workspace
+                        </h3>
                     </div>
                     <div ng-controller="ConsumerHomeCreditApplicationsInWorkspaceCtrl">
-                        <div id="secondGrid" ui-grid="gridOptions" ui-grid-selection ui-grid-cellNav class="grid"></div>
+                        <div id="secondgrid" ui-grid="ConsumerHomeCreditApplicationsInWorkspaceGridOptions" external-scopes="clickHandler"  ui-grid-selection ui-grid-cellNav class="grid"></div>
                     </div>
-
-                </div>
-                <!-- /.row (nested) -->
             </div>
             <!-- /.panel-body -->
         </div>
         <!-- /.panel.panel-default -->
-    </div>
-    <!-- /.col-lg-12 -->
-</div>
-<!-- /.row -->
+
 
 

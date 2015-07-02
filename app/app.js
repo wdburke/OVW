@@ -3,6 +3,7 @@
  */
 var myApp = angular.module('myApp', ["ui.router",'myControllers','ui.grid', 'ui.grid.saveState', 'ui.grid.selection', 'ui.grid.cellNav', 'ui.grid.resizeColumns', 'ui.grid.moveColumns', 'ui.grid.pinning', 'ui.bootstrap', 'ui.grid.autoResize','angular-loading-bar', 'ui.tree' ]);
 
+
 myApp.config(function($stateProvider, $urlRouterProvider) {
     //
     // For any unmatched url, redirect to /state1
@@ -44,6 +45,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
             url: "/orderHistoryList",
             templateUrl: "app/components/consumerRTPA/views/orderHistoryList.html"
         })
+
+
 });
 
 

@@ -8,36 +8,55 @@ var myControllers = angular.module('myControllers', []);
 
 myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
 
+    $scope.clickHandler = {
+        onClick : function(){
+            alert('Hey');
+        }
+    };
+
+    $scope.ConsumerHomeAccountsInWorkspaceGridOptions = {
+        showFooter: false,
+        enableSorting: true,
+        multiSelect: false,
+        enableFiltering: false,
+        enableRowSelection: true,
+        enableSelectAll: false,
+        enableRowHeaderSelection: false,
+        enableGridMenu: false,
+        noUnselect: true,
+        onRegisterApi: function (gridApi){
+            $scope.gridApi = gridApi;
+        },
+        appScopeProvider: $scope.myAppScopeProvider
+    }
+
+    $scope.ConsumerHomeAccountsInWorkspaceGridOptions.columnDefs = [
+        { name: 'AccountNumber', enableCellEditOnFocus:false, displayName:'Account Number' },
+        { name: 'AccountType', enableCellEditOnFocus:false, displayName:'Account Type' },
+        { name: 'CustomerName', enableCellEditOnFocus:false, displayName:'Customer Name' },
+        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Reload</button></div>'},
+        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">View</button></div>'},
+        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Close</button></div>'}
+    ];
+
     var millisecondsToWait = 500;
     setTimeout(function() {
-        $scope.gridOptions.data = [
+        $scope.ConsumerHomeAccountsInWorkspaceGridOptions.data = [
             {
-                "SplitPay": "Sue",
-                "DPID": "456353522",
-                "OrderNumber": "6785674564",
-                "DCN": "456867567",
-                "CoNum": "1678678",
-                "Source": "Phone",
-                "OrderDate": "7/1/2015",
-                "DellStatus": "Good",
-                "DFSStatus": "Good",
-                "AuthCode": "AC",
-                "DPAAmt": "1000",
-                "TotalAmt": "150"
+                "AccountNumber": "567445634",
+                "AccountType": "DPA",
+                "CustomerName": "Earl Andrews",
+                "1": "1",
+                "2": "2",
+                "3": "3"
             },
             {
-                "SplitPay": "Bob",
-                "DPID": "667456745",
-                "OrderNumber": "234213423",
-                "DCN": "56756575",
-                "CoNum": "7978567457",
-                "Source": "Phone",
-                "OrderDate": "7/2/2015",
-                "DellStatus": "Good",
-                "DFSStatus": "Bad",
-                "AuthCode": "ACC",
-                "DPAAmt": "5000",
-                "TotalAmt": "820"
+                "AccountNumber": "87658675674",
+                "AccountType": "DPA",
+                "CustomerName": "Bruce Lee",
+                "1": "1",
+                "2": "2",
+                "3": "3"
             }
         ];
     }, millisecondsToWait);
@@ -46,42 +65,60 @@ myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$htt
 
 myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
 
+    $scope.clickHandler = {
+        onClick : function(){
+            alert('Hey');
+        }
+    };
+
+    $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions = {
+        showFooter: false,
+        enableSorting: true,
+        multiSelect: false,
+        enableFiltering: false,
+        enableRowSelection: true,
+        enableSelectAll: false,
+        enableRowHeaderSelection: false,
+        enableGridMenu: false,
+        noUnselect: true,
+        onRegisterApi: function (gridApi){
+            $scope.gridApi = gridApi;
+        },
+        appScopeProvider: $scope.myAppScopeProvider
+    }
+
+    $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions.columnDefs = [
+        { name: 'AccountNumber', enableCellEditOnFocus:false, displayName:'Account Number' },
+        { name: 'AccountType', enableCellEditOnFocus:false, displayName:'Account Type' },
+        { name: 'CustomerName', enableCellEditOnFocus:false, displayName:'Customer Name' },
+        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Reload</button></div>'},
+        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">View</button></div>'},
+        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Close</button></div>'}
+    ];
+
     var millisecondsToWait = 500;
     setTimeout(function() {
-        $scope.gridOptions.data = [
+        $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions.data = [
             {
-                "SplitPay": "Sue",
-                "DPID": "456353522",
-                "OrderNumber": "6785674564",
-                "DCN": "456867567",
-                "CoNum": "1678678",
-                "Source": "Phone",
-                "OrderDate": "7/1/2015",
-                "DellStatus": "Good",
-                "DFSStatus": "Good",
-                "AuthCode": "AC",
-                "DPAAmt": "1000",
-                "TotalAmt": "150"
+                "AccountNumber": "567445634",
+                "AccountType": "DPA",
+                "CustomerName": "Earl Andrews",
+                "1": "1",
+                "2": "2",
+                "3": "3"
             },
             {
-                "SplitPay": "Bob",
-                "DPID": "667456745",
-                "OrderNumber": "234213423",
-                "DCN": "56756575",
-                "CoNum": "7978567457",
-                "Source": "Phone",
-                "OrderDate": "7/2/2015",
-                "DellStatus": "Good",
-                "DFSStatus": "Bad",
-                "AuthCode": "ACC",
-                "DPAAmt": "5000",
-                "TotalAmt": "820"
+                "AccountNumber": "87658675674",
+                "AccountType": "DPA",
+                "CustomerName": "Bruce Lee",
+                "1": "1",
+                "2": "2",
+                "3": "3"
             }
         ];
     }, millisecondsToWait);
 
 }]);
-
 
 myControllers.controller('treeCtrl', ['$scope', '$filter',
     function($scope, $filter) {
