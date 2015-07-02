@@ -6,13 +6,12 @@
 var myControllers = angular.module('myControllers', []);
 
 
-myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
+myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$http', '$log', '$state', function ($scope, $http, $log, $state) {
 
-    $scope.clickHandler = {
-        onClick : function(){
-            alert('Hey');
-        }
+    $scope.showMe = function(){
+        $state.go('orderHistoryList');
     };
+
 
     $scope.ConsumerHomeAccountsInWorkspaceGridOptions = {
         showFooter: false,
@@ -26,20 +25,20 @@ myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$htt
         noUnselect: true,
         onRegisterApi: function (gridApi){
             $scope.gridApi = gridApi;
-        },
-        appScopeProvider: $scope.myAppScopeProvider
+        }
+
     }
 
     $scope.ConsumerHomeAccountsInWorkspaceGridOptions.columnDefs = [
         { name: 'AccountNumber', enableCellEditOnFocus:false, displayName:'Account Number' },
         { name: 'AccountType', enableCellEditOnFocus:false, displayName:'Account Type' },
         { name: 'CustomerName', enableCellEditOnFocus:false, displayName:'Customer Name' },
-        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Reload</button></div>'},
-        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">View</button></div>'},
-        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Close</button></div>'}
+        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.showMe()">Reload</button></div>'},
+        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.showMe()">View</button></div>'},
+        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.showMe()">Close</button></div>'},
     ];
 
-    var millisecondsToWait = 500;
+    var millisecondsToWait = 100;
     setTimeout(function() {
         $scope.ConsumerHomeAccountsInWorkspaceGridOptions.data = [
             {
@@ -65,10 +64,8 @@ myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$htt
 
 myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
 
-    $scope.clickHandler = {
-        onClick : function(){
-            alert('Hey');
-        }
+    $scope.showMe2 = function(){
+        alert('Hey');
     };
 
     $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions = {
@@ -83,20 +80,20 @@ myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$sco
         noUnselect: true,
         onRegisterApi: function (gridApi){
             $scope.gridApi = gridApi;
-        },
-        appScopeProvider: $scope.myAppScopeProvider
+        }
+
     }
 
     $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions.columnDefs = [
         { name: 'AccountNumber', enableCellEditOnFocus:false, displayName:'Account Number' },
         { name: 'AccountType', enableCellEditOnFocus:false, displayName:'Account Type' },
         { name: 'CustomerName', enableCellEditOnFocus:false, displayName:'Customer Name' },
-        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Reload</button></div>'},
-        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">View</button></div>'},
-        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.clickHandler()">Close</button></div>'}
+        { name:'Reload', cellTemplate:'<div><button ng-click="grid.appScope.showMe2()">Reload</button></div>'},
+        { name:'View', cellTemplate:'<div><button ng-click="grid.appScope.showMe2()">View</button></div>'},
+        { name:'Close', cellTemplate:'<div><button ng-click="grid.appScope.showMe2()">Close</button></div>'}
     ];
 
-    var millisecondsToWait = 500;
+    var millisecondsToWait = 100;
     setTimeout(function() {
         $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions.data = [
             {
