@@ -43,7 +43,7 @@ myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$htt
         $scope.ConsumerHomeAccountsInWorkspaceGridOptions.data = [
             {
                 "AccountNumber": "567445634",
-                "AccountType": "DPA",
+                "AccountType": "CPA",
                 "CustomerName": "Earl Andrews",
                 "1": "1",
                 "2": "2",
@@ -51,7 +51,7 @@ myControllers.controller('ConsumerHomeAccountsInWorkspaceCtrl', ['$scope', '$htt
             },
             {
                 "AccountNumber": "87658675674",
-                "AccountType": "DPA",
+                "AccountType": "CPA",
                 "CustomerName": "Bruce Lee",
                 "1": "1",
                 "2": "2",
@@ -98,7 +98,7 @@ myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$sco
         $scope.ConsumerHomeCreditApplicationsInWorkspaceGridOptions.data = [
             {
                 "AccountNumber": "567445634",
-                "AccountType": "DPA",
+                "AccountType": "CPA",
                 "CustomerName": "Earl Andrews",
                 "1": "1",
                 "2": "2",
@@ -106,7 +106,7 @@ myControllers.controller('ConsumerHomeCreditApplicationsInWorkspaceCtrl', ['$sco
             },
             {
                 "AccountNumber": "87658675674",
-                "AccountType": "DPA",
+                "AccountType": "CPA",
                 "CustomerName": "Bruce Lee",
                 "1": "1",
                 "2": "2",
@@ -249,16 +249,16 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
 
         $scope.gridOptions.columnDefs = [
             { name: 'SplitPay', enableCellEditOnFocus:false, displayName:'Split Pay' },
-            { name: 'DPID', enableCellEditOnFocus:false, displayName:'DPID' },
+            { name: 'Purchase ID', enableCellEditOnFocus:false, displayName:'Purchase ID' },
             { name: 'OrderNumber', enableCellEditOnFocus:false, displayName:'Order Number' },
-            { name: 'DCN', enableCellEditOnFocus:false, displayName:'DCN' },
+            { name: 'CCN', enableCellEditOnFocus:false, displayName:'CCN' },
             { name: 'CoNum', enableCellEditOnFocus:false, displayName:'Co Num' },
             { name: 'Source', enableCellEditOnFocus:false, displayName:'Source'},
             { name: 'OrderDate', enableCellEditOnFocus:false, displayName:'Order Date'},
-            { name: 'DellStatus', enableCellEditOnFocus:false, displayName:'Dell Status'},
+            { name: 'ClientStatus', enableCellEditOnFocus:false, displayName:'Client Status'},
             { name: 'DFSStatus', enableCellEditOnFocus:false, displayName:'DFS Status' },
             { name: 'AuthCode', enableCellEditOnFocus:false, displayName:'Auth Code' },
-            { name: 'DPAAmt', enableCellEditOnFocus:false, displayName:'DPAAmt' },
+            { name: 'CPAAmt', enableCellEditOnFocus:false, displayName:'CPAAmt' },
             { name: 'TotalAmt', enableCellEditOnFocus:false, displayName:'TotalAmt' }
        ];
 
@@ -267,30 +267,30 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
             $scope.gridOptions.data = [
                 {
                     "SplitPay": "Sue",
-                    "DPID": "456353522",
+                    "Purchase ID": "456353522",
                     "OrderNumber": "6785674564",
-                    "DCN": "456867567",
+                    "CCN": "456867567",
                     "CoNum": "1678678",
                     "Source": "Phone",
                     "OrderDate": "7/1/2015",
-                    "DellStatus": "Good",
+                    "ClientStatus": "Good",
                     "DFSStatus": "Good",
                     "AuthCode": "AC",
-                    "DPAAmt": "1000",
+                    "CPAAmt": "1000",
                     "TotalAmt": "150"
                 },
                 {
                     "SplitPay": "Bob",
-                    "DPID": "667456745",
+                    "Purchase ID": "667456745",
                     "OrderNumber": "234213423",
-                    "DCN": "56756575",
+                    "CCN": "56756575",
                     "CoNum": "7978567457",
                     "Source": "Phone",
                     "OrderDate": "7/2/2015",
-                    "DellStatus": "Good",
+                    "ClientStatus": "Good",
                     "DFSStatus": "Bad",
                     "AuthCode": "ACC",
-                    "DPAAmt": "5000",
+                    "CPAAmt": "5000",
                     "TotalAmt": "820"
                 }
             ];
