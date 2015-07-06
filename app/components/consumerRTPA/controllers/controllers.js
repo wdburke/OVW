@@ -256,7 +256,7 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
             { name: 'Source', enableCellEditOnFocus:false, displayName:'Source'},
             { name: 'OrderDate', enableCellEditOnFocus:false, displayName:'Order Date'},
             { name: 'ClientStatus', enableCellEditOnFocus:false, displayName:'Client Status'},
-            { name: 'DFSStatus', enableCellEditOnFocus:false, displayName:'DFS Status' },
+            { name: 'FinanceStatus', enableCellEditOnFocus:false, displayName:'Finance Status' },
             { name: 'AuthCode', enableCellEditOnFocus:false, displayName:'Auth Code' },
             { name: 'CPAAmt', enableCellEditOnFocus:false, displayName:'CPAAmt' },
             { name: 'TotalAmt', enableCellEditOnFocus:false, displayName:'TotalAmt' }
@@ -274,7 +274,7 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
                     "Source": "Phone",
                     "OrderDate": "7/1/2015",
                     "ClientStatus": "Good",
-                    "DFSStatus": "Good",
+                    "FinanceStatus": "Good",
                     "AuthCode": "AC",
                     "CPAAmt": "1000",
                     "TotalAmt": "150"
@@ -288,7 +288,7 @@ myControllers.controller('OrderListCtrl', ['$scope', '$http', '$interval', '$mod
                     "Source": "Phone",
                     "OrderDate": "7/2/2015",
                     "ClientStatus": "Good",
-                    "DFSStatus": "Bad",
+                    "FinanceStatus": "Bad",
                     "AuthCode": "ACC",
                     "CPAAmt": "5000",
                     "TotalAmt": "820"
