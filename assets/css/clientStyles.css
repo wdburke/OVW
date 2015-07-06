@@ -175,6 +175,13 @@ div.panel-footer {
   background-color: #eeeeee;
 }
 /*#endregion*/
+/*#region Grid Components*/
+i.ui-grid-icon-ok {
+  color: green;
+}
+i.ui-grid-icon-cancel {
+  color: red;
+}
 /*#region custom rules*/
 @media (max-width: 768px) {
   div#page-wrapper .row:first-child {
