@@ -40,6 +40,10 @@ nav.navbar .navbar-default i,
 nav.navbar .navbar-brand i {
   color: white;
 }
+nav.navbar .navbar-default:focus,
+nav.navbar .navbar-brand:focus {
+  color: white;
+}
 nav.navbar .navbar-brand:hover {
   color: white;
 }
