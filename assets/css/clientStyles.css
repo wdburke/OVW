@@ -124,6 +124,9 @@ div.panel-footer {
 /*#endregion*/
 /*#endregion*/
 /*#region custom classes*/
+div.ui-grid-icon-container i {
+  color: #0087c7;
+}
 .form-group.rtpa-search-consumer {
   margin-bottom: .5em;
 }
